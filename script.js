@@ -873,4 +873,14 @@ function SaveOption(opt) {
     document.getElementById("WindowBack").style.display = "none";    
     document.getElementById("usercurrent").textContent = "Jugador: " + userpoints;
     document.getElementById("botcurrent").textContent = "Bot: " + botpoints;
+    if(played_cities.length == 22){
+        if(userpoints > botpoints) document.getElementById("result").textContent = "El Jugador gana la eleccion";
+        if(botpoints > userpoints) document.getElementById("result").textContent = "El Bot gana la eleccion";
+        if(botpoints == userpoints) document.getElementById("result").textContent = "Se ha presentado un empate";
+        document.getElementById("Reload").style.display = "block";
+    }
+}
+
+function Reload(){
+    location.reload();
 }

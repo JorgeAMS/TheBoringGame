@@ -142,6 +142,26 @@ body {
     color: #13a700;
 }
 
+.right .currents .result {
+    color: #c2cf01;
+}
+
+.right .currents button {
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+    line-height: 25px;
+    font-family: 'Roboto', sans-serif;
+    padding: 7px;
+    cursor: pointer;
+    width: 50%;
+    margin: 1em 15px;
+}
+
 .selected {
     fill: #db6a00;
     fill-rule: nonzero;
