@@ -1,74 +1,158 @@
-body{
+body {
     background-color: #fff;
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
-.left{
- width: 60%;
- float: left;
- background-color: rgb(0, 130, 206);
- height: 100vh;
+.WindowBack {
+    display: none;
+    position: fixed;
+    width: 70%;
+    height: 100%;
+    z-index: 2;
+    background-color: #00000071;
 }
-.left .tittle{
+
+.WindowBack .GameWindow {
+    position: absolute;
+    left: calc(calc(100% - 800px)/2);
+    top: calc(calc(100% - 580.64px)/2);
+    width: 800px;
+    height: 580.64px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.WindowBack .GameWindow .Options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.WindowBack .GameWindow span {
+    width: 90%;
+    text-align: center;
+    padding: 0 5% 1em 5%;
+    font-size: 1.2em;
+}
+
+.WindowBack .GameWindow .Options .User {
+    color: #006ba8;
+}
+
+.WindowBack .GameWindow .Options .Bot {
+    color: #13a700;
+}
+
+.WindowBack .GameWindow .BotOption {
+    color: #a70000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.WindowBack .GameWindow .UserOptions {
+    display: flex;
+    margin-top: 2em;
+    justify-content: center;
+}
+
+.WindowBack .GameWindow button {
+    color: #ffffff;
+    background-color: #005eb6;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+    line-height: 25px;
+    font-family: 'Roboto', sans-serif;
+    padding: 7px;
+    cursor: pointer;
+    width: 30%;
+    margin: 0 2em;
+}
+
+.left {
+    width: 70%;
+    float: left;
+    background-image: url("img/bg.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+
+.left .tittle {
     height: 10%;
     background-color: rgb(0, 0, 0);
 }
 
-.left .map{
-    background-color: rgb(0, 130, 206);
-    width: 114mm;
+.left .map {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 150mm;
+    height: 100vh;
     margin: auto;
-    margin-top: 10%;
 }
 
-.right{
+.right {
     margin-top: 0%;
-    width: 40%;
+    width: 30%;
     float: left;
     height: 100vh;
 }
 
-.right .tittle{
-    height: 9%;
+.right .tittle {
+    height: 10vh;
     background-color: rgb(0, 0, 0);
     border: 0px;
     border-bottom: 1px solid white;
     margin-top: 0%;
-    padding-top: 3%;
+    padding-top: 2vh;
 }
-.right .tittle h1{
-    margin-top: 0px;
+
+.right .tittle h1 {
     color: white;
     margin-left: 15px;
 }
 
-.right .content{
-    height: 88%;
+.right .content {
+    height: 40vh;
+    border-bottom: 1px solid white;
     background-color: rgb(0, 0, 0);
-    padding-top: 5%;
-}
-.right .content span{
-    margin-left: 15px;
+    padding-top: 2vh;
 }
 
+.right .currents {
+    height: calc(44vh - 2px);
+    background-color: rgb(0, 0, 0);
+    padding-top: 2vh;
+}
 
+.right .currents .user {
+    color: #006ba8;
+}
 
-.selected{
-    fill: #ff5e00;
+.right .currents .bot {
+    color: #13a700;
+}
+
+.selected {
+    fill: #db6a00;
     fill-rule: nonzero;
 }
 
-.cpu_selected{
-    fill: #00ff40;
-    fill-rule: nonzero;
-}
-
-.on_hover{
+.on_hover {
     fill: #f5a700 !important;
     fill-rule: nonzero;
 }
 
-span{
+.right span {
     color: white;
+    margin-left: 15px;
 }
