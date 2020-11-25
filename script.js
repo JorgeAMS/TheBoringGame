@@ -316,21 +316,21 @@ let proposals = {
 let pointsmatrix = {
     "R1": {
         0: {
-            0: {
+            0: {                    // A - C
                 "user": 2,
                 "bot": 1
             },
-            1: {
+            1: {                    // A - D
                 "user": 3,
                 "bot": 0
             }
         },
         1: {
-            0: {
+            0: {                    // B - C
                 "user": 1,
                 "bot": 2
             },
-            1: {
+            1: {                    //  B - D
                 "user": 2,
                 "bot": 1
             }
@@ -866,7 +866,8 @@ function set_question(id) {
 function SaveOption(opt) {
     console.log(currentregion + ": " + opt + "-" + botproposal);
     var output = pointsmatrix[currentregion][opt][botproposal];
-    console.log(output);
+    console.log(output["user"]);
+    console.log(output["bot"]);
     userpoints += output["user"];
     botpoints += output["bot"];
     remove_city_info();
